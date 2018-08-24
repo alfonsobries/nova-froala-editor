@@ -1,0 +1,30 @@
+{
+    "name": "alfonsobries/nova-froala-editor",
+    "description": "A Laravel Nova froala editor field.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "froala",
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vexilo\\NovaFroalaEditor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vexilo\\NovaFroalaEditor\\NovaFroalaEditorServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
