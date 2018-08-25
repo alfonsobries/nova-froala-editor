@@ -19,15 +19,9 @@ class NovaFroalaEditorServiceProvider extends ServiceProvider
             Nova::script('froala-editor', __DIR__.'/../dist/js/field.js');
             Nova::style('froala-editor', __DIR__.'/../dist/css/field.css');
         });
-    }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
+        $this->publishes([
+            __DIR__.'/../dist/fonts/' => public_path('nova-assets/fonts')
+        ], 'froala-editor-fonts');
     }
 }

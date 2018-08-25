@@ -19,40 +19,27 @@ class NovaFroalaEditor extends Field
 
         $this->withMeta([
             'options' => [
-                'width' => 640,
-                'height' => 390,
-                'mute' => true,
-                'playerOptions' => []
+                'toolbarButtons' => ['bold', 'italic', 'underline', '|', 'formatOL', 'formatUL', '|', 'insertImage', 'insertLink', 'insertVideo', '|', 'html'],
+                'toolbarButtonsXS' => ['bold', 'italic', 'underline', '|', 'formatOL', 'formatUL'],
+                'heightMin' => 200,
             ]
         ]);
     }
 
-    public function playerHeight(int $height)
-    {
-        return $this->options(compact('height'));
-    }
-
-    protected function options(array $options)
+    /**
+     * Allow to pass any existing Froala option to the editor.
+     * Consult the Froala documentation [https://www.froala.com/wysiwyg-editor/docs/options]
+     * to view the list of all the available options:
+     *
+     * @param  array  $options
+     * @return self
+     */
+    public function options(array $options)
     {
         $currentOptions = $this->meta['options'];
-
+        
         return $this->withMeta([
             'options' => array_merge($currentOptions, $options)
         ]);
-    }
-
-    public function playerWidth(int $width)
-    {
-        return $this->options(compact('width'));
-    }
-
-    public function mute(bool $mute)
-    {
-        return $this->options(compact('mute'));
-    }
-
-    public function playerOptions(array $options)
-    {
-        return $this->options(['playerOptions' => $options]);
     }
 }

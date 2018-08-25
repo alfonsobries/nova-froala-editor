@@ -11,11 +11,13 @@
     },
     "devDependencies": {
         "cross-env": "^5.0.0",
+        "install": "^0.12.1",
         "laravel-mix": "^1.0",
         "laravel-nova": "^1.0",
-        "vue-youtube-embed": "^2.2.1"
+        "npm": "^6.4.0"
     },
     "dependencies": {
-        "vue": "^2.5.0"
+        "vue": "^2.5.0",
+        "vue-froala-wysiwyg": "^2.8.4"
     }
 }
