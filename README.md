@@ -18,7 +18,7 @@ php artisan vendor:publish --tag=froala-editor-fonts
 
 ## Simple Usage:
 ```php
-FroalaEditor::make('Field Name')
+NovaFroalaEditor::make('Field Name')
 ```
 
 ## Advanced Usage:
