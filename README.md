@@ -15,7 +15,6 @@ composer require alfonsobries/nova-froala-editor
 php artisan vendor:publish --tag=froala-editor-fonts
 ```
 
-
 ## Simple Usage:
 ```php
 NovaFroalaEditor::make('Field Name')
@@ -27,6 +26,9 @@ You can pass any existing Froala option. Consult the [Froala documentation](http
 NovaFroalaEditor::make('Description')
     ->options(['toolbarInline' => true])
 ```
+
+## Screenshot
+![Froala editor](./docs/sh1.png)
 
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
